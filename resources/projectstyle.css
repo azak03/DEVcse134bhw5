@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
-    width: 80%;
+
 }
 project-card picture img {
     width: 100%; /* Make sure images scale with their container */
