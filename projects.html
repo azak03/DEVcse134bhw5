@@ -2,43 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Cards</title>
-    <style>
-        :root {
-            --card-bg: #f9f9f9;
-            --card-border: #ddd;
-            --card-radius: 8px;
-            --card-padding: 16px;
-        }
-        
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        project-card {
-            display: block;
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: var(--card-radius);
-            padding: var(--card-padding);
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <meta name="description" content="Anthony Z.'s projects!">
+    <meta name="keywords" content="Anthony Z., Projects">
+    <meta name="author" content="Anthony Z.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My projects</title>
+    <link rel="stylesheet" href="resources/globalstyle.css">
+    <script src="resources/theme.js"></script>
 </head>
 <body>
-    <h1>My Projects</h1>
+    <nav class="links">
+        <button id="mobile" type="button">☰</button>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div>Theme:</div>
+    <noscript> WARNING: JavaScript disabled! The theme toggler is not available.</noscript>
+    <button id="theme-button" class="off">🌙</button>
+    <hgroup>
+        <h1><span class="container">My Projects</span></h1>
+    </hgroup>
     <div class="card-container" id="cardContainer"></div>
-    
     <script>
         class ProjectCard extends HTMLElement {
             constructor() {
                 super();
                 this.attachShadow({ mode: 'open' });
                 this.shadowRoot.innerHTML = `
+                    <style>
+                        :host {
+                            display: block;
+                            padding: 16px;
+                            border-radius: 8px;
+                            background: var(--card-bg);
+                            border: 1px solid var(--card-border);
+                        }
+                        h2 {
+                            margin: 0 0 10px;
+                        }
+                        img {
+                            max-width: 100%;
+                            border-radius: 5px;
+                        }
+                        p {
+                            margin: 10px 0;
+                        }
+                        a {
+                            text-decoration: none;
+                            color: blue;
+                        }
+                    </style>
                     <h2></h2>
                     <picture>
                         <img src="" alt="">
@@ -85,5 +99,7 @@
             container.appendChild(card);
         });
     </script>
+
+    <noscript>Warning: Your browser does not have JavaScript support or JavaScript is disabled! This may cause problems when viewing my site!</noscript>
 </body>
 </html>
