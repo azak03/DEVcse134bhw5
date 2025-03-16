@@ -93,8 +93,8 @@
     document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("card-container");
         document.getElementById("load-local").addEventListener("click", () => {
-            const data = JSON.parse(localStorage.getItem("projects")) || [];
-            renderProjects(data, container);
+            //const data = JSON.parse(localStorage.getItem("projects")) || [];
+            renderProjects(projects, container);
         });
     </script>
 
