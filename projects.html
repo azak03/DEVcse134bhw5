@@ -73,6 +73,18 @@
         }
         customElements.define('project-card', ProjectCard);
         
+        function renderProjects(data, container) {
+            container.innerHTML = "";
+            data.forEach(item => {
+                const card = document.createElement("project-card");
+                card.setAttribute("title", item.title);
+                card.setAttribute("image", item.image);
+                card.setAttribute("alt", item.alt);
+                card.setAttribute("description", item.description);
+                card.setAttribute("link", item.link);
+                container.appendChild(card);
+            });
+        }
         const projects = [
             {
                 title: "Print Project",
@@ -96,6 +108,7 @@
             //const data = JSON.parse(localStorage.getItem("projects")) || [];
             renderProjects(projects, container);
         });
+    });
     </script>
 
     <noscript>Warning: Your browser does not have JavaScript support or JavaScript is disabled! This may cause problems when viewing my site!</noscript>
