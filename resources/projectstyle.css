@@ -4,11 +4,10 @@
     gap: 4rem;
 
 }
-project-card picture img {
+.card-container img {
     width: 100%; /* Make sure images scale with their container */
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image doesn't distort */
-    border-radius: 10px; /* Optional: Adds rounded corners for aesthetics */
     max-width: 100%;
 }
 project-card {
