@@ -90,15 +90,11 @@
             }
         ];
         
-        const container = document.getElementById("cardContainer");
-        projects.forEach(proj => {
-            const card = document.createElement("project-card");
-            card.setAttribute("title", proj.title);
-            card.setAttribute("image", proj.image);
-            card.setAttribute("alt", proj.alt);
-            card.setAttribute("description", proj.description);
-            card.setAttribute("link", proj.link);
-            container.appendChild(card);
+    document.addEventListener("DOMContentLoaded", () => {
+        const container = document.getElementById("card-container");
+        document.getElementById("load-local").addEventListener("click", () => {
+            const data = JSON.parse(localStorage.getItem("projects")) || [];
+            renderProjects(data, container);
         });
     </script>
 
