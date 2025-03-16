@@ -12,7 +12,7 @@ project-card picture img {
     border-radius: 10px; /* Optional: Adds rounded corners for aesthetics */
     max-width: 100%;
 }
-.project-card {
+project-card {
     display: flex;
     flex-direction: column; /* Ensure elements stack inside the card */
     width: 100%; /* Ensure card width is constrained */
