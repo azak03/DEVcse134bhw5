@@ -110,6 +110,14 @@
             renderProjects(data, container);
         });
     });
+    document.getElementById("remote-button").addEventListener("click", () => {
+        fetch("https://api.jsonbin.io/v3/b/67d6417f8960c979a5726c3f")
+            .then(response => response.json())
+            .then(data => {
+                renderProjects(data, container);
+            })
+            .catch(error => console.error("Error fetching remote data:", error));
+    });
     </script>
 
     <noscript>Warning: Your browser does not have JavaScript support or JavaScript is disabled! This may cause problems when viewing my site!</noscript>
