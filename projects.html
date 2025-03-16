@@ -101,12 +101,13 @@
                 link: "#"
             }
         ];
+    localStorage.setItem("projects", JSON.stringify(projects));
         
     document.addEventListener("DOMContentLoaded", () => {
         const container = document.getElementById("cardContainer");
         document.getElementById("local-button").addEventListener("click", () => {
-            //const data = JSON.parse(localStorage.getItem("projects")) || [];
-            renderProjects(projects, container);
+            const data = JSON.parse(localStorage.getItem("projects")) || [];
+            renderProjects(data, container);
         });
     });
     </script>
