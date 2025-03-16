@@ -32,34 +32,45 @@
                 super();
                 this.attachShadow({ mode: 'open' });
                 this.shadowRoot.innerHTML = `
-               <style>
-                    :host {
-                        display: block;
-                        background: var(--card-bg, #fff);
-                        border: 1px solid var(--card-border, #ddd);
-                        padding: 1rem;
-                        border-radius: 8px;
-                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                        transition: transform 0.3s ease;
-                    }
-                    :host(:hover) {
-                        transform: scale(1.02);
-                    }
-                    h2 {
-                        margin: 0 0 0.5rem 0;
-                    }
-                    picture img {
-                        width: 100%;
-                        border-radius: 4px;
-                    }
-                    p {
-                        font-size: 0.9rem;
-                    }
-                    a {
-                        color: var(--link-color, blue);
-                        text-decoration: none;
-                    }
-                </style>
+            <style>
+                :host {
+                    display: block;
+                    background: var(--card-bg, #fff);
+                    border: 1px solid var(--card-border, #ddd);
+                    padding: 1rem;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    transition: opacity 0.5s ease-in-out, transform 0.3s ease;
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                :host(.fade-in) {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                :host(:hover) {
+                    transform: scale(1.02);
+                }
+                h2 {
+                    margin: 0 0 0.5rem 0;
+                }
+                picture img {
+                    width: 100%;
+                    border-radius: 4px;
+                }
+                p {
+                    font-size: 0.9rem;
+                }
+                a {
+                    color: var(--link-color, blue);
+                    text-decoration: none;
+                }
+                #project-container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                }
+            </style>
                     <h2></h2>
                     <picture>
                         <img src="" alt="">
