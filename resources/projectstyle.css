@@ -1,3 +1,11 @@
+:root {
+  --border-color: #2b2b2a;
+}
+
+.light-mode {
+  --border-color: white;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 30rem);
@@ -6,8 +14,8 @@
 }
 project-card {
     display: block;
-    background: var(--card-bg, #2b2b2a);
-    border: 1px solid var(--card-border, #2b2b2a);
+    background: var(--border-color);
+    border: 1px solid var(--border-color);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
