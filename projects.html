@@ -38,6 +38,9 @@
                     <h2></h2>
                     <figure>
                         <picture>
+                            <source srcset="" media="(max-width: 420px)">
+                            <source srcset="" media="(max-width: 768px)">
+                            <source srcset="" media="(min-width: 769px)">
                             <img part="cardimg" src="" alt="">
                         </picture>
                     </figure>
@@ -48,6 +51,9 @@
             connectedCallback() {
                 this.shadowRoot.querySelector('h2').textContent = this.getAttribute('title');
                 this.shadowRoot.querySelector('img').src = this.getAttribute('image');
+                this.shadowRoot.querySelector('source[media="(max-width: 420px)"]').srcset = this.getAttribute('fallbackimage350');
+                this.shadowRoot.querySelector('source[media="(max-width: 768px)"]').srcset = this.getAttribute('fallbackimage500');
+                this.shadowRoot.querySelector('source[media="(min-width: 769px)"]').srcset = this.getAttribute('image');
                 this.shadowRoot.querySelector('img').alt = this.getAttribute('alt');
                 this.shadowRoot.querySelector('p').textContent = this.getAttribute('description');
                 this.shadowRoot.querySelector('a').href = this.getAttribute('link');
@@ -70,7 +76,9 @@
         let projects = [
             {
                 title: "XSS Payload",
-                image: "https://i0.wp.com/blog.nashtechglobal.com/wp-content/uploads/2024/06/cross-site-scripting-xss.jpg?fit=1200%2C630&ssl=1",
+                image: "resources/xss-800.webp",
+                fallbackimage500: "resources/xss-500.webp",
+                fallbackimage350: "resources/xss-350.webp",
                 alt: "Image of XSS",
                 description: "As part of the projects I worked on in CSE 127, I created a functional XSS payload that logged user-related information such as username and recent searches. XSS refers to cross-site scripting, in which an attacker exploits vulnerabilities to achieve arbitrary HTML/JavaScript execution in a victim's browser.",
                 link: "https://www.cloudflare.com/learning/security/threats/cross-site-scripting/"
@@ -78,6 +86,8 @@
             {
                 title: "Statistical Analysis Project",
                 image: "https://media.licdn.com/dms/image/v2/D4D12AQEFDU4XuJP11w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1698229402254?e=2147483647&v=beta&t=7mnB7C9BMj6bXQwypYXIwFoQuZ5vItSRLZ0Ox9qvMKA",
+                fallbackimage500: "",
+                fallbackimage350: "",
                 alt: "GIF of printing in action",
                 description: "My peers and I worked on a project in COGS 108 where we analyzed what geographical factors determined house prices. We evaluated datasets using python libraries such as numpy, pandas, and seaborn to plot the data and draw conclusions.",
                 link: "https://www.kaggle.com/code/imoore/intro-to-exploratory-data-analysis-eda-in-python"
@@ -85,6 +95,8 @@
             {
                 title: "Web Scraper",
                 image: "resources/scraper.png",
+                fallbackimage500: "",
+                fallbackimage350: "",
                 alt: "Screenshot of web scraper",
                 description: "A Python-based web scraper to collect data.",
                 link: "#"
