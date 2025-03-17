@@ -4,13 +4,7 @@
     gap: 4rem;
 
 }
-img {
-    width: 70% !important;
-    height: 70% !important;
-    object-fit: cover !important;
-    max-width: 100%;
-    display: none !important;
-}
+
 project-card {
     display: flex;
     align-items: center;
