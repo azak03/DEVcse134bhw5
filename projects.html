@@ -28,7 +28,7 @@
     <br>
     <button id="remote-button">Load Remote</button>
     <br>
-    <div class="card-container" id="cardContainer"></div>
+    <div class="card-container" id="card-container"></div>
     <script>
         class ProjectCard extends HTMLElement {
             constructor() {
@@ -116,7 +116,7 @@
     localStorage.setItem("projects", JSON.stringify(projects));
         
     document.addEventListener("DOMContentLoaded", () => {
-        let container = document.getElementById("cardContainer");
+        let container = document.getElementById("card-container");
         document.getElementById("local-button").addEventListener("click", () => {
             let data = JSON.parse(localStorage.getItem("projects")) || [];
             renderProjects(data, container);
