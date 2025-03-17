@@ -16,6 +16,9 @@ project-card {
     height: 75%;
     width: 75%;
 }
+project-card(hover) {
+    transform: scale(1.015);
+}
 button {
     background-color: #007BFF;
     color: white;
