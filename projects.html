@@ -81,6 +81,7 @@
             container.innerHTML = "";
             data.forEach(item => {
                 const card = document.createElement("project-card");
+                card.setAttribute("part", "card");
                 card.setAttribute("title", item.title);
                 card.setAttribute("image", item.image);
                 card.setAttribute("alt", item.alt);
