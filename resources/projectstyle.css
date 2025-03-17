@@ -18,6 +18,7 @@ button {
 project-card::part(carda) {
     color: #007BFF;
     text-decoration: none;
+    margin-top: auto;
 }
 project-card {
     display: flex;
