@@ -35,7 +35,7 @@ project-card::part(carda) {
     text-decoration: none;
     margin-top: auto;
 }
-project-card::part(img) {
+project-card::part(cardimg) {
     width: 100%;
     object-fit: cover;
 }
