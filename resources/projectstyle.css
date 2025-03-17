@@ -1,5 +1,4 @@
 .card-container {
-    padding: 0 2rem 0 2rem;
     display: grid;
     grid-template-columns: repeat(2, 30rem);
     gap: 4rem;
