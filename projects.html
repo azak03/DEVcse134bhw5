@@ -58,7 +58,7 @@
         function renderProjects(data, container) {
             container.innerHTML = "";
             data.forEach(item => {
-                const card = document.createElement("project-card");
+                let card = document.createElement("project-card");
                 card.setAttribute("title", item.title);
                 card.setAttribute("image", item.image);
                 card.setAttribute("alt", item.alt);
@@ -67,7 +67,7 @@
                 container.appendChild(card);
             });
         }
-        const projects = [
+        let projects = [
             {
                 title: "XSS Payload",
                 image: "https://i0.wp.com/blog.nashtechglobal.com/wp-content/uploads/2024/06/cross-site-scripting-xss.jpg?fit=1200%2C630&ssl=1",
@@ -93,9 +93,9 @@
     localStorage.setItem("projects", JSON.stringify(projects));
         
     document.addEventListener("DOMContentLoaded", () => {
-        const container = document.getElementById("cardContainer");
+        let container = document.getElementById("cardContainer");
         document.getElementById("local-button").addEventListener("click", () => {
-            const data = JSON.parse(localStorage.getItem("projects")) || [];
+            let data = JSON.parse(localStorage.getItem("projects")) || [];
             renderProjects(data, container);
         });
         document.getElementById("remote-button").addEventListener("click", () => {
