@@ -15,7 +15,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-project-card::part(card) a {
+project-card::part(carda) a {
     color: #007BFF;
     text-decoration: none;
 }
