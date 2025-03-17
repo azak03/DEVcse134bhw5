@@ -9,7 +9,7 @@ project-card {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     height: auto;
     overflow: hidden;
     max-width: 100%;
