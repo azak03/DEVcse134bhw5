@@ -5,26 +5,24 @@
 
 }
 .card-container img {
-    width: 70% !important; /* Make sure images scale with their container */
+    width: 70% !important;
     height: 70% !important;
-    object-fit: cover !important; /* Ensure the image doesn't distort */
+    object-fit: cover !important;
     max-width: 100%;
     opacity:0.5;
 }
 project-card {
     display: flex;
     align-items: center;
-    flex-direction: row; /* Ensure elements stack inside the card */
-    width: 100%; /* Ensure card width is constrained */
-    max-width: 400px; /* Optional: Set a max width */
-    height: auto; /* Allow the height to adjust based on content */
-    overflow: hidden; /* Prevent content from overflowing */
-    padding: 16px; /* Adjust padding inside the card */
-    border-radius: 10px; /* Optional: Rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow effect */
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 768px) {
     .card-container {
-        grid-template-columns: 1fr; /* 1 card per row on smaller screens */
+        grid-template-columns: 1fr;
     }
 }
