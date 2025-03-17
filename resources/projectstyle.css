@@ -5,7 +5,8 @@
 
 }
 .card-container img {
-    width: 80%; /* Make sure images scale with their container */
+    width: 70%; /* Make sure images scale with their container */
+    height: 70%;
     height: auto; /* Maintain aspect ratio */
     object-fit: cover; /* Ensure the image doesn't distort */
     max-width: 100%;
