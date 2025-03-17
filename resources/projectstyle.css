@@ -9,7 +9,7 @@
     height: 70% !important;
     object-fit: cover !important;
     max-width: 100%;
-    opacity:0.5;
+    display: none;
 }
 project-card {
     display: flex;
@@ -18,7 +18,7 @@ project-card {
     width: 100%;
     height: auto;
     overflow: hidden;
-    max-width: 400px;
+    max-width: 100%;
     border-radius: 10px; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
