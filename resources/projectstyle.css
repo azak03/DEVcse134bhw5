@@ -7,8 +7,7 @@
 .card-container img {
     width: 70%; /* Make sure images scale with their container */
     height: 70%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image doesn't distort */
+    object-fit: cover !important; /* Ensure the image doesn't distort */
     max-width: 100%;
 }
 project-card {
